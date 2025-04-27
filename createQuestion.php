@@ -7,10 +7,6 @@ if (!isset($_SESSION['admin_id'])){
 
 $data = json_decode(file_get_contents('php//input'), true);
 
-if(!isset($data['quiz_ic']) || !isset($data['quiestion_text']) || !isset($data['correct_answer'])){
-    echo json_encode(["message" => "admin not loggedIn!!"]);
-}
-
 $quiz_id = $data['quiz_id'];
 $question_text = $data['question_text'];
 $correct_answer = $data['correct_answer'];
